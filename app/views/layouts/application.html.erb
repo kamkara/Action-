@@ -10,6 +10,8 @@
     <%= javascript_importmap_tags %>
     <!-- Tailwindcss -->
      <%= stylesheet_link_tag 'tailwind', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- Header -->
+     <%= render "shared/layouts/header" %>
   </head>
 
   <body class="bg-red-400">
@@ -17,5 +19,8 @@
     <h1 class="text-3xl font-bold underline">
     Hello world!
   </h1>
+
+    <!--Footer  -->
+     <%= render "shared/layouts/footer" %>
   </body>
 </html>
