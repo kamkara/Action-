@@ -25,6 +25,14 @@
 //= link images/testimonial-1.jpg
 //= link images/testimonial-2.jpg
 //= link images/testimonial-3.jpg
+//= link images/back-1.png
+//= link images/back-2.png
+//= link images/back-3.png
+//= link images/back-4.png
+//= link images/back-5.png
+//= link images/back-6.png
+//= link images/back-7.png
+//= link images/back-8.png
 
 //= link_directory ../stylesheets .css
 //= link_tree ../../javascript .js
