@@ -1,2 +1,24 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="container-xxl bg-gray-200 p-0">
+
+<!-- Navbar Start -->
+<div class="container-fluid nav-bar bg-transparent">
+    <%= render "welcome/shared/navbar" %>
+</div>
+<!-- Navbar End -->
+
+<!-- Header Start -->
+<div class="container-fluid header bg-white p-0">
+    <%= render "welcome/shared/header" %>
+</div>
+<!-- Header End -->
+
+ <!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <%= render "welcome/shared/footer" %>
+</div>
+<!-- Footer End -->
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
+    <i class="bi bi-arrow-up"></i>
+</a>
+</div>

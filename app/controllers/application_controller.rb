@@ -3,13 +3,15 @@ class ApplicationController < ActionController::Base
     #Devise strong params
     protect_from_forgery with: :exception
     before_action :configure_permitted_parameters, if: :devise_controller?
-
+    
+    
     protected
     # If you have extra params to permit, append them to the sanitizer.
     def configure_permitted_parameters
-        sign_up_params       = [ :first_name, :last_name, :full_name,
-          :contact, :user_status, :country, :email, :newletter, :terms,
-          :password, :slug, :gender, :membership_category]
+        sign_up_params = [ :first_name, :last_name, :full_name,
+                            :user_status, :country, :country_code,
+                            :contact, :email, :newletter, :terms,
+                            :password, :slug, :gender, :membership_category]
           
                 
         devise_parameter_sanitizer.permit :sign_up, keys: sign_up_params

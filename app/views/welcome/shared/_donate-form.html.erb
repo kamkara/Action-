@@ -1,0 +1,41 @@
+<%= form_with(model: post, class: "form-inline") do |f| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-5">
+    <%= f.label :"le titre" %>
+    <%= f.text_field :title, class: "rounded-md w-full", placeholder:"Ecrivez le titre ..." %>
+  </div>
+
+  <div class="my-5">
+    <%= f.label :Article %>
+    <%= f.rich_text_area :content, rows: 4, class: "input-field bg-white rounded-md resize", placeholder:"Ecrivez le texte ..." %>
+  </div>
+
+  <div class="my-5 font-semibold">
+    <p class="font-normal">Status</p>
+
+    <%= f.radio_button :status, "prive", checked: true%>
+    <%= f.label :status, "Encours", class:"mr-4" %>
+    <%= f.radio_button :status, "public" %>
+    <%= f.label :status, "Public", class:"mr-4" %>
+    <%= f.radio_button :status, "membre" %>
+    <%= f.label :status, "Membres", class:"mr-4" %>
+    <%= f.radio_button :status, "archive" %>
+    <%= f.label :status, "Archive" %>
+
+  </div>
+ 
+  <div class="inline">
+    <%= f.submit "Créer l'article", class: "rounded-lg py-2 px-4 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>

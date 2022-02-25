@@ -7,7 +7,7 @@ class User < ApplicationRecord
   #has_many :posts
 
    validates :first_name, :last_name, :full_name, :email, :password,
-              :contact, :country, presence: true
+              :country_code, :country, :contact, presence: true
     
    validates :full_name,presence: true,
               format: { with: /\A[^0-9`!@#\$%\^&*+_=]+\z/ },
