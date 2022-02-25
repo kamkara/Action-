@@ -12,8 +12,9 @@ module Action
     config.load_defaults 7.0
 
 #Add loader locale
-    config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
-    config.i18n.default_locale = :de
+    #config.i18n.available_locales = [:en, :fr]
+    #config.i18n.default_locale = :fr
+
 
     # Configuration for the application, engines, and railties goes here.
     #
