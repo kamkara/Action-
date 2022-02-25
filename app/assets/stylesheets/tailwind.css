@@ -637,6 +637,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-full {
   height: 100%;
 }
@@ -729,6 +733,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-blue-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
 .p-0 {
