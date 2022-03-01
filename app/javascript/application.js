@@ -5,6 +5,7 @@ import "controllers"
 // require images
 const images = require.context('../images', true)
 
-import './components/pricing.js'
-import './components/modal_charte.js'
-import './components/caroussel.js'
+import './components/pricing'
+import './components/modal_charte'
+import './components/caroussel'
+import './components/dashboard'
