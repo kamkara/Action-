@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :abouts
   root to:'welcome#index'
   get "dashboard", to:'dashboard#index'
   
