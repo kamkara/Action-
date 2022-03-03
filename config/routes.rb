@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :works
   root to:'welcome#index'
   get "dashboard", to:'dashboard#index'
   get "parametrage", to:'dashboard#home'
