@@ -14,11 +14,11 @@ class AboutsTest < ApplicationSystemTestCase
     visit abouts_url
     click_on "New about"
 
-    fill_in "Content", with: @about.content
     fill_in "Country", with: @about.country
     fill_in "Donator", with: @about.donator
-    fill_in "Img main", with: @about.img_main
+    fill_in "Heroimg", with: @about.heroImg
     fill_in "Projets", with: @about.projets
+    check "Published" if @about.published
     fill_in "Title", with: @about.title
     fill_in "User", with: @about.user_id
     click_on "Create About"
@@ -31,11 +31,11 @@ class AboutsTest < ApplicationSystemTestCase
     visit about_url(@about)
     click_on "Edit this about", match: :first
 
-    fill_in "Content", with: @about.content
     fill_in "Country", with: @about.country
     fill_in "Donator", with: @about.donator
-    fill_in "Img main", with: @about.img_main
+    fill_in "Heroimg", with: @about.heroImg
     fill_in "Projets", with: @about.projets
+    check "Published" if @about.published
     fill_in "Title", with: @about.title
     fill_in "User", with: @about.user_id
     click_on "Update About"

@@ -17,7 +17,7 @@ class AboutsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create about" do
     assert_difference("About.count") do
-      post abouts_url, params: { about: { content: @about.content, country: @about.country, donator: @about.donator, img_main: @about.img_main, projets: @about.projets, title: @about.title, user_id: @about.user_id } }
+      post abouts_url, params: { about: { country: @about.country, donator: @about.donator, heroImg: @about.heroImg, projets: @about.projets, published: @about.published, title: @about.title, user_id: @about.user_id } }
     end
 
     assert_redirected_to about_url(About.last)
@@ -34,7 +34,7 @@ class AboutsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update about" do
-    patch about_url(@about), params: { about: { content: @about.content, country: @about.country, donator: @about.donator, img_main: @about.img_main, projets: @about.projets, title: @about.title, user_id: @about.user_id } }
+    patch about_url(@about), params: { about: { country: @about.country, donator: @about.donator, heroImg: @about.heroImg, projets: @about.projets, published: @about.published, title: @about.title, user_id: @about.user_id } }
     assert_redirected_to about_url(@about)
   end
 

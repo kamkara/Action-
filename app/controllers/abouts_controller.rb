@@ -1,9 +1,10 @@
 class AboutsController < ApplicationController
+  before_action :authenticate_user!, except: %i[index]
   before_action :set_about, only: %i[ show edit update destroy ]
 
   # GET /abouts or /abouts.json
   def index
-    @abouts = About.all
+    @abouts = About.all.with_rich_text_content
   end
 
   # GET /abouts/1 or /abouts/1.json
@@ -21,7 +22,7 @@ class AboutsController < ApplicationController
 
   # POST /abouts or /abouts.json
   def create
-    @about = About.new(about_params)
+    @about = current_user.abouts.build(about_params)
 
     respond_to do |format|
       if @about.save
@@ -60,11 +61,11 @@ class AboutsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_about
-      @about = About.find(params[:id])
+      @about = About.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def about_params
-      params.require(:about).permit(:title, :img_main, :content, :country, :donator, :projets, :user_id)
+      params.require(:about).permit(:title, :heroImg, :content, :slug, :country, :donator, :projets, :published, :user_id)
     end
 end

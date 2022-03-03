@@ -2,18 +2,18 @@
 
 one:
   title: MyString
-  img_main: MyString
-  content: MyText
-  country: MyString
-  donator: MyString
-  projets: MyString
+  heroImg: MyString
+  country: 1
+  donator: 1
+  projets: 1
+  published: false
   user: one
 
 two:
   title: MyString
-  img_main: MyString
-  content: MyText
-  country: MyString
-  donator: MyString
-  projets: MyString
+  heroImg: MyString
+  country: 1
+  donator: 1
+  projets: 1
+  published: false
   user: two

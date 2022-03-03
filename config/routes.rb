@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-  resources :abouts
   root to:'welcome#index'
   get "dashboard", to:'dashboard#index'
+  get "parametrage", to:'dashboard#home'
+  get "mission", to:"abouts#show"
+  get "nous_decouvrir", to:"abouts#index"
+  get "mission_new", to:"abouts#new"
+  get "mission_editer", to:"abouts#edit"
+  get "mission_supprimer", to:"abouts#destroy"
   
+  resources :abouts, only: %i[create show]
 
   devise_scope :user do
     get 'profile/edit'    => 'devise/registrations#edit',   :as => :edit_user_registration
