@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :trackable
 
   #has_many :posts
+  has_many :abouts
 
    validates :first_name, :last_name, :full_name, :email, :password,
               :country_code, :country, :contact, presence: true

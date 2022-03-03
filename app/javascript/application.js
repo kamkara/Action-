@@ -8,4 +8,5 @@ const images = require.context('../images', true)
 import './components/pricing'
 import './components/modal_charte'
 import './components/caroussel'
-import './components/dashboard'
+import './components/dashboard'import "trix"
+import "@rails/actiontext"
