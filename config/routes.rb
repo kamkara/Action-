@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :works
   root to:'welcome#index'
- 
+  
+  get "donate", to:'donate#index'
   get "agisons-ensemble", to:"involved#index"
   get "dashboard", to:'dashboard#index'
   get "parametrage", to:'dashboard#home'
@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "mission_editer", to:"abouts#edit"
   get "mission_supprimer", to:"abouts#destroy"
   
+  resources :works
   resources :abouts, only: %i[create show]
 
   devise_scope :user do
