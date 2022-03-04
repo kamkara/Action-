@@ -1,0 +1,97 @@
+<!-- Meta message-->
+<% @title="Agisons Ensemble" %>
+
+<!-- Navbar Start -->
+<div class="container-fluid  bg-green-200">
+    <%= render "welcome/shared/navbar" %>
+</div>
+<!-- Navbar End -->
+<!-- presentations-->
+<div class="container-xxl py-5">
+    <div class="container bg-green-200">
+        <div class="text-center wow fadeInUp ">
+            <h6 class=" bg-white text-center text-primary px-3">Etre impliqué</h6>
+            <h1 class="mb-5">Agisons Ensemble</h1>
+           
+            <p class="mt-6 text-center ">Peu importe votre âge, votre lieu de résidence ou votre capacité à donner ou non, vous pouvez aider à mettre fin à la crise de l'eau, d'élèctriciter ou d'éducation et vous pouvez commencer dès maintenant.</p>
+        </div>
+    </div>
+    
+    <!-- involved avatar-->
+    <div class="row container-xxl justify-content-center mt-20">
+        <div class="col-md-8 flex wow fadeInUp mx-24">
+            <div class="container course-item">
+                <div class="position-relative overflow-hidden">
+                    <%= image_tag "back-2.png", class:"img-fluid rounded-full", alt:"", style:"width: 180px; height: 180px;" %>
+                </div>
+                   
+            </div>
+            <div class="container course-item ">
+                <div class="position-relative overflow-hidden">
+                    <%= image_tag "back-4.png", class:"img-fluid rounded-full", alt:"", style:"width: 180px; height: 180px;" %>    
+                </div>     
+            </div>
+            <div class="container course-item mb-12">
+                <div class="position-relative overflow-hidden">
+                    <%= image_tag "full.jpeg", class:"img-fluid rounded-full", alt:"", style:"width: 180px; height: 180px;" %>  
+                </div>                
+            </div>
+        </div>
+        <div class="col-md-10 ">
+          <h1 class="mb-2 mt-20">Commencer ici</h1>
+          <div class=" flex text-center mt-4 md:mx-6">
+            <div class="col-6 md:col-md-8">
+              <p class="">Pour commencer, il suffit de créer un compte et de configurer votre profil public. Chaque Euro, chaque dollar que vous donnez ou collectez augmente votre impact à vie.</p> 
+            </div>
+            <div class="col-4">
+            <!-- component -->
+                <button class="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-blue-700 uppercase transition bg-transparent border-2 border-blue-700 rounded ripple hover:bg-blue-100 focus:outline-none">
+                Crée votre compte
+                </button>
+            </div>
+              
+          </div>
+        </div>
+        <!-- hr  -->
+        <hr class="border-2 bg-blue-700 mb-20">
+        <div class="col-md-10 ">
+          <div class=" flex text-center mt-4 md:mr-6">
+            <div class="col-6 md:col-md-8">
+              <%= image_tag "back-2.png" %> 
+            </div>
+            <div class="col-8">
+                <div class="">
+                    <h1 class="">Lancer une campagne de financement</h1>
+                    <p class="">Des stands de limonade aux balades à vélo à travers le pays et tout le reste, nous avons vu des milliers de militants prouver que rien n'est fou lorsqu'il s'agit de collecter des fonds pour l'eau potable.
+
+                            Créez votre propre campagne en choisissant une activité de collecte de fonds, en créant une page de campagne simple et en faisant passer le mot. Ensuite, nous enverrons 100 % des fonds que vous collectez sur le terrain et nous ferons un rapport sur le projet d'eau exact que votre campagne a aidé à financer.</p>
+                </div>
+                <!-- component -->
+                <button class="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-blue-700 uppercase transition bg-transparent border-2 border-blue-700 rounded ripple hover:bg-blue-100 focus:outline-none">
+                Crée votre compte
+                </button>
+                ou 
+                <%= link_to  "rejoindre une campagne", root_path, class:"inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-gray-700 uppercase transition rounded " %>
+            </div>
+              
+          </div>
+
+        </div>
+          <%= render "involved/shared/partnership" %>
+        
+      </div>
+      <!-- newsletter -->
+<div class="container-xxl py-5">
+    <%= render "welcome/shared/email_letter" %>
+</div>
+<!-- newsletter End -->
+</div>
+ <!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <%= render "welcome/shared/footer" %>
+</div>
+<!-- Footer End -->
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
+    <i class="bi bi-arrow-up"></i>
+</a>
