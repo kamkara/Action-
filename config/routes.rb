@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   resources :works
   root to:'welcome#index'
+ 
+  get "agisons-ensemble", to:"involved#index"
   get "dashboard", to:'dashboard#index'
   get "parametrage", to:'dashboard#home'
   get "mission", to:"abouts#show"
-  get "nous_decouvrir", to:"abouts#index"
+  get "nous-decouvrir", to:"abouts#index"
   get "mission_new", to:"abouts#new"
   get "mission_editer", to:"abouts#edit"
   get "mission_supprimer", to:"abouts#destroy"
