@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Newletters</h1>
+
+<div id="newletters">
+  <% @newletters.each do |newletter| %>
+    <%= render newletter %>
+    <p>
+      <%= link_to "Show this newletter", newletter %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New newletter", new_newletter_path %>

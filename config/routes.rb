@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :newletters
   root to:'welcome#index'
   
   get "adherer", to:'membership#index'
