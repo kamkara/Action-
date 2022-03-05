@@ -18,14 +18,13 @@
             <div class="nav-item dropdown">
                 <%= link_to root_path, class:"nav-link dropdown-toggle", "data-bs-toggle":"dropdown" do %>En Action<% end %>
                 <div class="dropdown-menu rounded-0 m-0">
-                    <%= link_to root_path, class:"dropdown-item" do %>Mobilisation<% end %>
-                    <%= link_to root_path, class:"dropdown-item" do %>Formations<% end %>
-                    <%= link_to root_path, class:"dropdown-item" do %>Missions <% end %>
+                    <%= link_to root_path, class:"dropdown-item" do %>Parrainnez un projet<% end %>
+                    <%= link_to root_path, class:"dropdown-item" do %>Sur Terrain<% end %>
                 </div>
             </div>
                    
-            <%= link_to "S'identifier", new_user_session_path, class:"nav-item nav-link active" %>
+            <%= link_to "S'identifier", adherer_path, class:"nav-item nav-link active" %>
         </div>      
-        <%= link_to 'Faire un don', root_path, class:"btn btn-primary px-3 d-none d-lg-flex" %>
+        <%= link_to 'Faire un don', donate_path, class:"outline-none rounded-lg border-2 border-green-500 p-2 uppercase font-semibold text-black no-underline" %>
     </div>
 </nav>
