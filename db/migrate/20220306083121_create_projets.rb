@@ -6,6 +6,8 @@ class CreateProjets < ActiveRecord::Migration[7.0]
       t.text :content
       t.date :start_date
       t.integer :amount
+      t.string :status
+      t.text :slug
       t.references :user, null: false, foreign_key: true, type: :uuid
 
       t.timestamps

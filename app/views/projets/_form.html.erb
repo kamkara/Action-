@@ -1,18 +1,28 @@
 
-<%= simple_form_for(@projet) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
+<%= form_for(@projet) do |f| %>
+ 
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :heroImg %>
-    <%= f.input :content %>
-    <%= f.input :start_date %>
-    <%= f.input :amount %>
-    <%= f.association :user %>
+    <%= f.text_field  :title, class:"p-2 border rounded-md", placeholder:'Nom du projet ...' %>
+  </div>
+  <div class="">
+  </div>
+  
+  <div class="">
+    <%= f.text_area :content, class:" bg-red-500 border rounded-md", placeholder:'Corps du projet ...' %>
+  </div>
+
+  <div class="">
+    <%= f.file_field :heroImg %>
+    <%= f.date_field :start_date, class:" p-2 border rounded-md", placeholder:'Debut ...' %>
+  </div>
+  <div class="">
+    <%= f.text_field :amount, class:"p-2 border rounded-md", placeholder:'Montant à collecté ...' %>
+    <%= f.select :status, Projet::STATUS, class:"p-6 border border-bblue-500 rounded-md", placeholder:'Status...' %>
+  </div>
+   
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.submit "Créer Projet", class:"p-2 border rounded-md bg-green-500 font-semibold text-white my-2" %>
   </div>
 <% end %>

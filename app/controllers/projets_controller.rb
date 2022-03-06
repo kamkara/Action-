@@ -1,9 +1,13 @@
 class ProjetsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_projet, only: %i[ show edit update destroy ]
 
   # GET /projets or /projets.json
   def index
-    @projets = Projet.all
+    @MembersList = User.where("membership_category = ?", "particulier" || "organisation").order('created_at desc')
+    @ProjetsList = Projet.all.order('created_at desc')
+    @ProjetsMonthly = @ProjetsList.where(:created_at => (Time.now.midnight - 30.day)..Time.now.midnight)
+    @ProjetsWeekly = @ProjetsMonthly.where(:created_at => (Time.now.midnight - 7.day)..Time.now.midnight)
   end
 
   # GET /projets/1 or /projets/1.json
@@ -21,7 +25,7 @@ class ProjetsController < ApplicationController
 
   # POST /projets or /projets.json
   def create
-    @projet = Projet.new(projet_params)
+    @projet = current_user.projets.build(projet_params)
 
     respond_to do |format|
       if @projet.save
@@ -65,6 +69,6 @@ class ProjetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def projet_params
-      params.require(:projet).permit(:title, :heroImg, :content, :start_date, :amount, :user_id)
+      params.require(:projet).permit(:title, :heroImg, :content, :start_date, :amount, :status, :slug, :user_id)
     end
 end

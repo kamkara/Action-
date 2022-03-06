@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    
+   
     #Devise strong params
     protect_from_forgery with: :exception
     before_action :configure_permitted_parameters, if: :devise_controller?
@@ -26,5 +26,4 @@ class ApplicationController < ActionController::Base
       def after_sign_up_path_for(resource)
         dashboard_path
       end
-
 end
