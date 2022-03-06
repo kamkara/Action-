@@ -43,7 +43,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+ gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
  gem "image_processing", "~> 1.2"
@@ -53,7 +53,7 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'devise-encryptable', '~> 0.2.0'
 #gem 'devise-security', '~> 0.17.0'
 gem 'devise-i18n', '~> 1.10', '>= 1.10.2'
-gem 'simple_form', '~> 5.1'
+#gem 'simple_form', '~> 5.1'
 gem 'friendly_id', '~> 5.4', '>= 5.4.2'
 
 group :development, :test do

@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   #has_many :posts
   has_many :abouts
+  has_many :projets
 
    validates :first_name, :last_name, :full_name, :email, :password,
               :country_code, :country, :contact, presence: true

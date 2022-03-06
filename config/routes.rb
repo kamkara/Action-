@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :newletters
   root to:'welcome#index'
   
+  get "nouveau-projets", to:"projets#new"
+  get "projets-list", to:"projets#index"
+  get "edit-projets", to:"projets#edit"
+  get "projets", to:"projets#show"
   get "adherer", to:'membership#index'
   get "members-list", to:"membership#memberslist"
   get "donate", to:'donate#index'
@@ -16,6 +19,8 @@ Rails.application.routes.draw do
   
   resources :works
   resources :abouts, only: %i[create show]
+  resources :projets, only: %i[update destoy]
+  resources :newletters
 
   devise_scope :user do
     get 'profile/edit'    => 'devise/registrations#edit',   :as => :edit_user_registration
