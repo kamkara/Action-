@@ -23,9 +23,9 @@
                     </svg>
                 </div>
     
-                <div class="mx-5">
-                    <h4 class="text-2xl font-semibold text-gray-700"><%= @MembersList.count %></h4>
-                    <div class="text-gray-500">Adhésions</div>
+                <div class="mx-2">
+                    <h4 class="text-2xl font-semibold text-gray-700"><%= @CampagnesList.count %> </h4>
+                    <div class="text-gray-500">Campagnes - <%= link_to "Créer", "nouvelle-campagnes", class:"font-semibold" %></div>
                 </div>
             </div>
             
@@ -52,8 +52,8 @@
             </div>
     
             <div class="mx-5">
-                <h4 class="text-2xl font-semibold text-gray-700"><%= @CampagnesList.count %></h4>
-                <div class="text-gray-500">Campagnes</div>
+                <h4 class="text-2xl font-semibold text-gray-700"><%=  @CampagnesMonthly.count %></h4>
+                <div class="text-gray-500">Mois</div>
             </div>
         </div>
     </div>
@@ -72,8 +72,8 @@
             </div>
     
             <div class="mx-5">
-                <h4 class="text-2xl font-semibold text-gray-700"><%= @ProjetsList.count %></h4>
-                <div class="text-gray-500">Projets</div>
+                <h4 class="text-2xl font-semibold text-gray-700"><%= @CampagnesWeekly.count %></h4>
+                <div class="text-gray-500">Semaine</div>
             </div>
         </div>
     </div>

@@ -3,6 +3,8 @@ class DashboardController < ApplicationController
   
   def index
     @MembersList = User.where("membership_category = ?", "particulier" || "organisation").order('created_at desc')
+    @ProjetsList = Projet.all
+    @CampagnesList = Campagne.all
   end
 
   def home
