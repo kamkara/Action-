@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   # MEMVERSHIP
   get "adherer", to:'membership#index'
   get "members-list", to:"membership#memberslist"
+  get "beaction", to:"membership#beaction"
 
   #DASHBOARD
   get "dashboard", to:'dashboard#index'

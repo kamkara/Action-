@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :projets
   has_many :campagnes
 
-   validates :first_name, :last_name, :full_name, :email, :password,
+  validates :first_name, :last_name, :full_name, :email, :password,
               :country_code, :country, :contact, presence: true
     
    validates :full_name,presence: true,

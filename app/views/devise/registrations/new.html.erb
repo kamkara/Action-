@@ -6,7 +6,8 @@
      <%= f.text_field :first_name, class:"pl-2 outline-none border-none", placeholder:"Nom ..." %>
 		  <%= f.text_field :last_name, class:"pl-2 outline-none border-none", placeholder:"Prénom..." %>
           <%= f.text_field :country, class:"pl-2 outline-none border-none", placeholder:"pays..." %>
-          <%= f.text_field :country_code, class:"pl-2 outline-none border-none", placeholder:"pays code..." %>
+          <%= f.text_field :country_code, collection: @continents, as: :grouped_select, group_method: :countries, class:"pl-2 outline-none border-none", placeholder:"pays code..." %>
+          
       
             <%= f.text_field :contact, placeholder:"N° Tel ...", class:"pl-2 outline-none border-none" %>	
           

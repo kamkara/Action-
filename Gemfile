@@ -53,8 +53,9 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'devise-encryptable', '~> 0.2.0'
 #gem 'devise-security', '~> 0.17.0'
 gem 'devise-i18n', '~> 1.10', '>= 1.10.2'
-#gem 'simple_form', '~> 5.1'
+gem 'simple_form', '~> 5.1'
 gem 'friendly_id', '~> 5.4', '>= 5.4.2'
+gem 'country_select'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
