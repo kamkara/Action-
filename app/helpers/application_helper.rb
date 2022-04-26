@@ -50,4 +50,12 @@ module ApplicationHelper
       flash_type.to_s
     end
 end
+
+
+# Notification
+  def render_notification
+    render "layouts/flash"
+  end
+
+  
 end
