@@ -13,9 +13,11 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
     <!-- Tailwindcss -->
      <%= stylesheet_link_tag 'tailwind', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- Header -->
+    
      <%= render "shared/layouts/header" %>
 
       <!-- Favicon-->
@@ -24,16 +26,19 @@
   </head>
 
   <body class="">
-    <style type="text/css">@media only screen and (min-width: 1025px) {
-  .hero--video-donate-form {
-    --hero_text_color: #fff;
-    --hero_bg_color: #000;
-  }
+    <style type="text/css">
 
-  .hero--video-overlay {
-    --hero_bg_color: #000;
-  }
-}</style>
+      @media only screen and (min-width: 1025px) {
+        .hero--video-donate-form {
+          --hero_text_color: #fff;
+          --hero_bg_color: #000;
+        }
+
+        .hero--video-overlay {
+          --hero_bg_color: #000;
+        }
+      }
+    </style>
     <%= yield %>
     
 
