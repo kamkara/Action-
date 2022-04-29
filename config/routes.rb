@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
+  
   root to:'welcome#index'
+
+  #### Accounted #####
+  get "connected", to:'accounted#signInMember'
+  get "adhesion", to:'accounted#signUpMember'
+  get "admin-accounted", to:'accounted#signUpAdmin'
+
   
   # CAMPAGNES
   get "nouvelle-campagnes", to:"campagnes#new"
