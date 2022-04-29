@@ -14,20 +14,38 @@
 
  */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
  
- 
+// Mixins
+@import "mixins/media";
+
+// Configuration
+@import "config/animations";
+@import "config/variables";
+@import "config/reset";
+
+
+
 @import url("components/main.css");
 @import url("components/style.css");
 @import url("components/bootstrap.min.css");
 @import url("components/owl.carousel.min.css");
 @import url("components/animate.min.css");
 @import url("components/mobile_navbar.css");
-@import 'components/actiontext.css';
 @import url("components/actiontrix.css");
-@import url("components/actiontext.css");
+@import url('components/actiontext.css');
 @import url("components/pricing.css");
 
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// Components
+@import "bases/btn";
+@import "bases/error_message";
+@import "bases/form";
+@import "bases/visually_hidden";
+@import "bases/turbo_progress_bar";
+@import "bases/navbar";
+@import "bases/flash";
+@import "bases/empty_state";
+
