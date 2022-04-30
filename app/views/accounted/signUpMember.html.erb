@@ -43,7 +43,7 @@
 	
         <%= f.email_field :email, placeholder:"Addresse Email ...", class:"placeholder:italic placeholder:text-slate-400 flex border py-2 rounded-md w-full my-2" %>			
       
-      <%#= f.text_field  :country, collection: countries_alpha3_options, format: :with_data_attrs, class:"pl-2 outline-none border rounded-md", placeholder:"pays code..." %>
+      <%= f.country_select  :country, collection: countries_alpha3_options, format: :with_data_attrs, class:"pl-2 outline-none border rounded-md", placeholder:"pays code..." %>
       <div class="flex w-full py-2 mb-2">
           <%= f.country_select :country_code, priority_countries: ["CI", "FR", "CA", "US"],
            prompt: "Votre pays", format: :with_data_attrs,
@@ -98,7 +98,7 @@
 
         <!-- Modal footer -->
         <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-            <button class="bg-blue-500 text-black border-1 rounded-md px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal()">Fermer</button>
+            <button class="bg-blue-500 text-black border-1 px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal()">Fermer</button>
         </div>
     </div>
 </div>
