@@ -13,7 +13,6 @@
             
             <%= link_to 'Nous découvrir', "nous-decouvrir", class:"nav-item nav-link active" %>
             
-            <%= link_to 'Nous aider', root_path, class:"nav-item nav-link" %>
             <%= link_to 'Agisons Ensemble', "agisons-ensemble", class:"nav-item nav-link" %>
             <div class="nav-item dropdown">
                 <%= link_to root_path, class:"nav-link dropdown-toggle", "data-bs-toggle":"dropdown" do %>En Action<% end %>
@@ -22,9 +21,10 @@
                     <%= link_to root_path, class:"dropdown-item" do %>Sur Terrain<% end %>
                 </div>
             </div>
+            <%= link_to 'Devenez Adhérent', adhesion_path, class:"nav-item nav-link" %>
                    
-            <%= link_to "S'identifier", adherer_path, class:"nav-item nav-link active" %>
+            <%= link_to "S'identifier", connected_path, class:"nav-item nav-link active" %>
         </div>      
-        <%= link_to 'Faire un don', donate_path, class:"outline-none rounded-lg border-2 border-green-500 p-2 uppercase font-semibold text-black no-underline" %>
+        <%= link_to 'Faire un don', root_path, class:"outline-none rounded-lg border-2 border-green-500 p-2 uppercase font-semibold text-black no-underline" %>
     </div>
 </nav>

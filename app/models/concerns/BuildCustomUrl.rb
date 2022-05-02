@@ -3,13 +3,13 @@ module BuildCustomUrl
 
   #find country name
   def country_name
-    country_name = ISO3166::Country[country_code]
-    country_name.translations[I18n.locale.to_s] || country.common_name || country.iso_short_name
-    self.country = "#{country_name}"
+    #country_name = ISO3166::Country[country_code]
+    #country_name.translations[I18n.locale.to_s] || country.common_name || country.iso_short_name
+    #self.country = "#{country_name}"
   end
 
   def full_contact
-    self.full_contact = "#{self.country_code}#{self.contact}" 
+    self.full_contact = "(#{self.country_code})  #{self.contact}" 
   end 
   
   def full_name

@@ -22,9 +22,6 @@ class User < ApplicationRecord
               length: { minimum:5, maximum: 30,
               message: "%{value} verifier votre nom complet"}
 
-   validates :full_contact, :email, uniqueness: true
-   #validates :country, :country_code, countries_alpha3: true           
-   
 
 
    ################## SLUG ###############

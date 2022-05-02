@@ -54,9 +54,9 @@ Rails.application.routes.draw do
   devise_for  :users,
     :path => '',
     :path_names =>
-      { :sign_in => 'connexion',
+      { :sign_in => 'connected',
         :sign_out => 'logout',
-        :sign_up =>   '', :registration => 'inscription',
+        :sign_up =>   '', :registration => 'adhesion',
         :edit => 'edit'
       }
          
