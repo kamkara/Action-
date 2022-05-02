@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   #### Accounted #####
   get "connected", to:'accounted#signInMember'
-  get "adhesion", to:'accounted#signUpMember'
+  get "adhesion-partner", to:'accounted#signUpMember'
   get "admin-accounted", to:'accounted#signUpAdmin'
 
   
