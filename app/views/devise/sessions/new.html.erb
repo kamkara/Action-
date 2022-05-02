@@ -17,7 +17,7 @@
       <h1 class="text-xl md:text-2xl font-bold leading-tight mt-12">Connectez-vous a votre compte</h1>
 
      
-      <%= simple_form_for(resource, as: resource_name, class:"mt-6", url: session_path(resource_name)) do |f| %>
+      <%= bootstrap_form_for(resource, as: resource_name, class:"mt-6", url: session_path(resource_name)) do |f| %>
         <!-- Notice error-->
         <%= render_notification %>
         <div>

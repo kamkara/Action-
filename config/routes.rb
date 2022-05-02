@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to:'welcome#index'
 
   #### Accounted #####
-  get "connected", to:'accounted#signInMember'
+  get "connecting", to:'accounted#signInMember'
   get "adhesion-partner", to:'accounted#signUpMember'
   get "admin-accounted", to:'accounted#signUpAdmin'
 
