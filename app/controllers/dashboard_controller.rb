@@ -8,5 +8,6 @@ class DashboardController < ApplicationController
   end
 
   def home
+    
   end
 end

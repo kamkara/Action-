@@ -2,8 +2,9 @@ class Campagne < ApplicationRecord
   belongs_to :user
   has_one_attached :heroImg
   has_rich_text :content
-  #Campagne.all.with_rich_text_content # Preload the body without attachments.
-  #Campagne.all.with_rich_text_content_and_embeds # Preload both body and attachments.
+  
+  Campagne.all.with_rich_text_content # Preload the body without attachments.
+  Campagne.all.with_rich_text_content_and_embeds # Preload both body and attachments.
 
 
   STATUS= ["Encours", "Approbation", "Public", "La lune", "Archive" ]

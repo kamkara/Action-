@@ -44,10 +44,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@rails/actiontext@^7.0.2-2":
-  version "7.0.2-2"
-  resolved "https://registry.yarnpkg.com/@rails/actiontext/-/actiontext-7.0.2-2.tgz#b1d84ecd352994b112366e0ffa9e4f71940179d2"
-  integrity sha512-l66fBFmlFz+LmLqzxpEKqh7Yz9c45UhVz2m1rSf0oIZoyA4AE96c+nqnFdu1t0VGYki3ZPp5JzXx9pIE4CSU2A==
+"@rails/actiontext@^7.0.2-4":
+  version "7.0.2-4"
+  resolved "https://registry.yarnpkg.com/@rails/actiontext/-/actiontext-7.0.2-4.tgz#973d1410730813af9c299bb496691c2d89102df5"
+  integrity sha512-nLPhWwYuM/w+8+RhFNW/QF0rnHr5lEXKetkIY0bBJfh+XoiUgHPiLKD0pnQvTOtuY5zc+CpDpApXNRqdwp3O7g==
   dependencies:
     "@rails/activestorage" ">= 7.0.0-alpha1"
 
@@ -589,10 +589,10 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-trix@^2.0.0-alpha.1:
-  version "2.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/trix/-/trix-2.0.0-alpha.1.tgz#ac6bb38b68354371bd7bb9ade2eddf7fb9e28a16"
-  integrity sha512-/b6dnpNFfSJwqa9tlYu7vB1NN7KaUrlCkPanz9Esflw3nuT8BuBYF2TGNJLyKfj00Rr0YlDBESRihkJA7riBSw==
+trix@^2.0.0-beta.0:
+  version "2.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/trix/-/trix-2.0.0-beta.0.tgz#e7034867182356c023abdef90c7bdc341bb3e105"
+  integrity sha512-D1c7FxP1hGXM/MnTd/+fGUbSDLkfxsqjA0NxOTzByQywVJVNHDOkn8xAScCKVOiAN6hXlqUR2qX4CPJHTGj+cQ==
 
 util-deprecate@^1.0.2:
   version "1.0.2"

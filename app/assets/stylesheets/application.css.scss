@@ -37,8 +37,6 @@
 @import url("components/owl.carousel.min.css");
 @import url("components/animate.min.css");
 @import url("components/mobile_navbar.css");
-@import url("components/actiontrix.css");
-@import url('components/actiontext.css');
 @import url("components/pricing.css");
 
 
@@ -52,3 +50,5 @@
 @import "bases/flash";
 @import "bases/empty_state";
 
+@import './actiontext.css';
+@import './actiontrix.css';
