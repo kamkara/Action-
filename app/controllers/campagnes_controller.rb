@@ -4,10 +4,10 @@ class CampagnesController < ApplicationController
 
   # GET /campagnes or /campagnes.json
   def index
-    @MembersList = User.where("membership_category = ?", "particulier" || "organisation").order('created_at desc')
     @CampagnesList = Campagne.all.order('created_at desc')
-    @CampagnesMonthly = @CampagnesList.where(:created_at => (Time.now.midnight - 30.day)..Time.now.midnight)
-    @CampagnesWeekly = @CampagnesMonthly.where(:created_at => (Time.now.midnight - 7.day)..Time.now.midnight)
+    @MembersList = User.membership
+    @CampagnesMonthly = @CampagnesList.monthlyActif
+    @CampagnesWeekly = @CampagnesMonthly.weeklyActif
     
   end
 

@@ -8,9 +8,9 @@ import './components/modal_charte'
 import './components/caroussel'
 import './components/dashboard'
 
-import "trix"
-import "@rails/actiontext"
 
+require("trix")
+require("@rails/actiontext")
 
 //= require jquery3
 //= require popper
