@@ -57,13 +57,15 @@ gem 'devise-i18n', '~> 1.10', '>= 1.10.2'
 gem 'friendly_id', '~> 5.4', '>= 5.4.2'
 gem 'rails-countries'
 gem 'country_select', '~> 7.0'
-
+gem "bootstrap", "~> 5.0"
+gem 'jquery-rails'
+gem 'bootstrap_form', '~> 5.0'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 
-  gem "better_errors"
+  #gem "better_errors"
   gem "binding_of_caller"
 end
 

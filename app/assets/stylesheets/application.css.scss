@@ -11,14 +11,16 @@
  * It is generally better to create a new file per style scope.
  *
  *
- *= require_tree .
- *= require_self
+
  */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
  
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+@import "rails_bootstrap_forms";
 // Mixins
 @import "mixins/media";
 
