@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
+  
   root to:'welcome#index'
+
+  #### Accounted #####
+  get "connecting", to:'accounted#signInMember'
+  get "adhesion-partner", to:'accounted#signUpMember'
+  get "admin-accounted", to:'accounted#signUpAdmin'
+
   
   # CAMPAGNES
   get "nouvelle-campagnes", to:"campagnes#new"
@@ -47,9 +54,9 @@ Rails.application.routes.draw do
   devise_for  :users,
     :path => '',
     :path_names =>
-      { :sign_in => 'connexion',
+      { :sign_in => 'connected',
         :sign_out => 'logout',
-        :sign_up =>   '', :registration => 'inscription',
+        :sign_up =>   '', :registration => 'adhesion',
         :edit => 'edit'
       }
          

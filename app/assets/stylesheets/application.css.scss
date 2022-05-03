@@ -18,6 +18,9 @@
 @tailwind components;
 @tailwind utilities;
  
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+@import "rails_bootstrap_forms";
 // Mixins
 @import "mixins/media";
 
