@@ -11,7 +11,7 @@
       <%= f.date_field :start_date, class:"p-2 border outline-none rounded-md" %>
     </div>
     <div class="">
-      <%= f.select :status, Campagne::STATUS, class:"p-2 border outline-none rounded-md" %>
+      <%= f.hidden_field :status, value:"Encours" %>
       <%= f.text_field :amount, prepend: ['Net Extimé', '€'], append: ['.00', 'pour la campagne'], hide_label:true , placeholder:"montant ...", class:"p-2 border outline-none rounded-md" %>
     </div>
     
