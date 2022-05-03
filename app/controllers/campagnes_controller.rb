@@ -30,7 +30,7 @@ class CampagnesController < ApplicationController
 
     respond_to do |format|
       if @campagne.save
-        format.html { redirect_to campagne_url(@campagne), notice: "Campagne was successfully created." }
+        format.html { redirect_to campagne_url(@campagne), notice: "Votre campagne est envoyée aux  administrateurs pour l'approbation." }
         format.json { render :show, status: :created, location: @campagne }
       else
         format.html { render :new, status: :unprocessable_entity }

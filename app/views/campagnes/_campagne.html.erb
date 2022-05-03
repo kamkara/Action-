@@ -1,6 +1,6 @@
 <div id="<%= dom_id campagne %>">
+<div class="container bg-white border-1 rounded-md m-2" >
   <p>
-    
     <%= campagne.title %>
   </p>
 
@@ -21,11 +21,11 @@
 
   <p>
     <strong>Status:</strong>
-    <%= campagne.status %> d'approbation
+    <span class="font-bold"> <%= campagne.status %>  </span> d'approbation
   </p>
 
   <p>
-    <strong>Montant Souhaité:</strong>
+    <strong>Objectif:</strong>
     <%= campagne.amount %>
   </p>
 
@@ -34,4 +34,5 @@
     <%= campagne.user.full_name %>
   </p>
 
+</div>
 </div>
