@@ -1,26 +1,26 @@
 
-<%= form_for(@projet) do |f| %>
+<%= bootstrap_form_for(@projet) do |f| %>
  
   <div class="form-inputs">
-    <%= f.text_field  :title, class:"p-2 border rounded-md", placeholder:'Nom du projet ...' %>
-  </div>
-  <div class="">
+    <%= f.text_field  :title, label:"Nom de la projet", class:"p-2 border rounded-md", placeholder:'Nom du projet ...', help:"Plus nom reflete la cause que vous deffendez, mieux les autres adheront"  %>
   </div>
   
   <div class="">
-    <%= f.rich_text_area :content, class:" bg-red-500 border rounded-md trix-content", placeholder:'Corps du projet ...' %>
+    <%= f.text_area :content, hide_label:true, class:" bg-red-500 border rounded-md trix-content", placeholder:'Contenu du projet ...' %>
   </div>
-
   <div class="">
     <%= f.file_field :heroImg %>
-    <%= f.date_field :start_date, class:" p-2 border rounded-md", placeholder:'Debut ...' %>
   </div>
-  <div class="">
-    <%= f.text_field :amount, class:"p-2 border rounded-md", placeholder:'Montant à collecté ...' %>
+
+  <div class="group">
+    <%= f.date_field :start_date, class:" p-2 border rounded-md" %>
     <%= f.select :status, Projet::STATUS, class:"p-6 border border-bblue-500 rounded-md", placeholder:'Status...' %>
   </div>
-   
+  <div class="">
+    
+      <%= f.text_field :amount, prepend: ['Net Extimé', '€'], append: ['.00', 'pour le projet'], hide_label:true , placeholder:"montant ...", class:"p-2 border outline-none rounded-md" %>
   </div>
+      
 
   <div class="form-actions">
     <%= f.submit "Créer Projet", class:"p-2 border rounded-md bg-green-500 font-semibold text-white my-2" %>

@@ -4,10 +4,10 @@ class ProjetsController < ApplicationController
 
   # GET /projets or /projets.json
   def index
-    @MembersList = User.where("membership_category = ?", "particulier" || "organisation").order('created_at desc')
+    @MembersList = User.membership
     @ProjetsList = Projet.all.order('created_at desc')
-    @ProjetsMonthly = @ProjetsList.where(:created_at => (Time.now.midnight - 30.day)..Time.now.midnight)
-    @ProjetsWeekly = @ProjetsMonthly.where(:created_at => (Time.now.midnight - 7.day)..Time.now.midnight)
+    @ProjetsMonthly = @ProjetsList.monthlyActif
+    @ProjetsWeekly = @ProjetsMonthly.weeklyActif
   end
 
   # GET /projets/1 or /projets/1.json
@@ -29,7 +29,7 @@ class ProjetsController < ApplicationController
 
     respond_to do |format|
       if @projet.save
-        format.html { redirect_to projet_url(@projet), notice: "Projet was successfully created." }
+        format.html { redirect_to projet_url(@projet), notice: "Projet est bien enregistré." }
         format.json { render :show, status: :created, location: @projet }
       else
         format.html { render :new, status: :unprocessable_entity }
