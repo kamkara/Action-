@@ -272,7 +272,7 @@ DEPENDENCIES
   binding_of_caller
   bootsnap
   capybara
-  country_select
+  country_select (~> 7.0)
   debug
   devise (~> 4.8, >= 4.8.1)
   devise-encryptable (~> 0.2.0)
@@ -284,6 +284,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.2)
+  rails-countries
   redis (~> 4.0)
   sassc-rails
   selenium-webdriver

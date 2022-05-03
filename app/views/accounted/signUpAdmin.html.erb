@@ -9,11 +9,11 @@
 
 			<h1 class="text-white font-bold text-4xl font-sans"> 
         <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
-        <span class="relative text-white">Adhésion</span>
+        <span class="relative text-white">Admin</span>
       </span>
       <br> à l'organisation humanitaire Action<sup>+</sup>
       </h1>
-			<p class="text-black mt-1">Vous voulez contribuer à sauver des vies ? <br> Rejoignez la communauté Action<sup>+</sup> !
+			<p class="text-black mt-1">Vous voulez contribuer à sauver des vies ? <br> Rejoignez les Admin de Action<sup>+</sup> !
 <br> <span class="font-semibold underline"> C'est facile, gratuit et 1 minute suffira.</span></p>
 			
     <button type="submit" class="block uppercase  bg-white text-indigo-600
@@ -43,16 +43,18 @@
 	
         <%= f.email_field :email, placeholder:"Addresse Email ...", class:"placeholder:italic placeholder:text-slate-400 flex border py-2 rounded-md w-full my-2" %>			
       
-      <%#= f.country_select  :country, collection: countries_alpha3_options, format: :with_data_attrs, class:"pl-2 outline-none border rounded-md", placeholder:"pays code..." %>
+      <%#= f.text_field  :country, collection: countries_alpha3_options, format: :with_data_attrs, class:"pl-2 outline-none border rounded-md", placeholder:"pays code..." %>
       <div class="flex w-full py-2 mb-2">
-          <%= f.text_field  :country_code,
+          <%#= f.country_select :country_code, priority_countries: ["CI", "FR", "CA", "US"],
+           prompt: "Votre pays", format: :with_data_attrs,
           class:"placeholder:italic placeholder:text-slate-400 flex border py-2 rounded-md w-full" %>
     
+        <%= f.text_field :country_code, placeholder:"code du pays ...", class:"flex border py-2 ml-2 rounded-md w-full" %>	
         <%= f.text_field :contact, placeholder:"N° telephone ...", class:"flex border py-2 ml-2 rounded-md w-full" %>	
       </div>
       
         <%= f.password_field :password, class:"flex border py-2 rounded-md w-full", placeholder:"Mot de passe ..." %>				
-      <%= f.hidden_field :category, value:"Adherent" %>
+      <%= f.hidden_field :category, value:"Admin" %>
       <div class="flex items-center  py-2 ">
       <%= f.check_box :terms, value:"oui", class:" mr-4", checked:true %>
       <p class="text-sm">
@@ -63,7 +65,7 @@
        </p>
       </div>
       
-      <%= f.submit "Créer, Votre Compte", class:"block w-full bg-green-600 mt-2 py-2 pb-2 rounded-2xl text-white font-semibold mb-2" %>
+      <%= f.submit "Créer,Votre Admin", class:"block w-full bg-green-600 mt-2 py-2 pb-2 rounded-2xl text-white font-semibold mb-2" %>
 		<% end %>
 	</div>
 </div>
@@ -97,7 +99,7 @@
 
         <!-- Modal footer -->
         <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-            <button class="bg-blue-500 text-black border-1 px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal()">Fermer</button>
+            <button class="bg-blue-500 text-black border-1 rounded-md px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal()">Fermer</button>
         </div>
     </div>
 </div>
