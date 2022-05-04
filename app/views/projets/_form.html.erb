@@ -1,8 +1,8 @@
 
-<%= bootstrap_form_for(@projet) do |f| %>
+<%= bootstrap_form_for(@projet, label_errors: true, inline_errors: true) do |f| %>
  
   <div class="form-inputs">
-    <%= f.text_field  :title, label:"Nom de la projet", class:"p-2 border rounded-md", placeholder:'Nom du projet ...', help:"Plus nom reflete la cause que vous deffendez, mieux les autres adheront"  %>
+    <%= f.text_field  :title, label:"Nom du Projet", class:"p-2 border rounded-md", placeholder:'Nom du projet ...', help:"Plus nom reflete la cause que vous deffendez, mieux les autres adheront"  %>
   </div>
   
   <div class="">

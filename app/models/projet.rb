@@ -7,8 +7,7 @@ class Projet < ApplicationRecord
 
   STATUS= ["Encours", "Approbation", "Public", "La lune", "Archive" ]
   validates :title, :content, :start_date, :amount, presence: true
-  validates :title, :content, format: { with: /\A[^0-9`!@#\$%\^&*+_=]+\z/ },
-              length: { minimum:5, maximum: 30}
+  validates :title, :content, length: { minimum:5}
 
 
   ################## SLUG ###############
