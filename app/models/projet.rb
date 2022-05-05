@@ -1,8 +1,8 @@
 class Projet < ApplicationRecord
   belongs_to :user
   has_rich_text :content
-  Projet.all.with_rich_text_content # Preload the body without attachments.
-  Projet.all.with_rich_text_content_and_embeds # Preload both body and attachments.
+  #Projet.all.with_rich_text_content # Preload the body without attachments.
+  #Projet.all.with_rich_text_content_and_embeds # Preload both body and attachments.
 
 
   STATUS= ["Encours", "Approbation", "Public", "La lune", "Archive" ]
