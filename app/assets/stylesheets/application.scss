@@ -21,6 +21,10 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 @import "rails_bootstrap_forms";
+@import url("components/actiontext.css");
+@import url("components/actiontrix.css");
+
+
 // Mixins
 @import "mixins/media";
 
@@ -50,5 +54,3 @@
 @import "bases/flash";
 @import "bases/empty_state";
 
-@import './actiontext.css';
-@import './actiontrix.css';
