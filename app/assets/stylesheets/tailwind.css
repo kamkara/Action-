@@ -1778,23 +1778,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@import url("components/main.css");
-
-@import url("components/style.css");
-
-@import url("components/bootstrap.min.css");
-
-@import url("components/owl.carousel.min.css");
-
-@import url("components/animate.min.css");
-
-@import url("components/mobile_navbar.css");
-
-@import url("components/actiontrix.css");
-
-@import url('components/actiontext.css');
-
-@import url("components/pricing.css");
 
 .placeholder\:italic::-moz-placeholder {
   font-style: italic;
