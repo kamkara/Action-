@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @campagne %>
+
+<div>
+  <%= link_to "Edit this campagne", edit_campagne_path(@campagne) %> |
+  <%= link_to "Back to campagnes", campagnes_path %>
+
+  <%= button_to "Destroy this campagne", @campagne, method: :delete %>
+</div>

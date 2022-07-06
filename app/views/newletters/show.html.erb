@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @newletter %>
+
+<div>
+  <%= link_to "Edit this newletter", edit_newletter_path(@newletter) %> |
+  <%= link_to "Back to newletters", newletters_path %>
+
+  <%= button_to "Destroy this newletter", @newletter, method: :delete %>
+</div>

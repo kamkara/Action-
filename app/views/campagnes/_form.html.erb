@@ -1,0 +1,23 @@
+
+<%= form_for(@campagne) do |f| %>
+  
+  <div class="form-inputs">
+    <%= f.text_field :title, class:"p-2 border outline-none rounded-md" %>
+    <div class="">
+      <%= f.text_area :content, class:"p-2 border outline-none rounded-md" %>
+    </div>
+    <div class="">
+      <%= f.file_field :heroImg, class:"p-2 border outline-none rounded-md" %>
+      <%= f.date_field :start_date, class:"p-2 border outline-none rounded-md" %>
+    </div>
+    <div class="">
+      <%= f.select :status, Campagne::STATUS, class:"p-2 border outline-none rounded-md" %>
+      <%= f.text_field :amount, class:"p-2 border outline-none rounded-md" %>
+    </div>
+    
+  </div>
+
+  <div class="form-actions mt-2">
+    <%= f.submit "Créer Campagne", class:"p-2 border bg-green-500 font-semibold text-black" %>
+  </div>
+<% end %>

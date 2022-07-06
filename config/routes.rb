@@ -1,19 +1,41 @@
 Rails.application.routes.draw do
   root to:'welcome#index'
   
+  # CAMPAGNES
+  get "nouvelle-campagnes", to:"campagnes#new"
+  get "campagnes-list", to:"campagnes#index"
+  get "edit-campagnes", to:"campagnes#edit"
+  #get "campagnes", to:"campagnes#show"
+  
+  #PROJETS
+  get "nouveau-projets", to:"projets#new"
+  get "projets-list", to:"projets#index"
+  get "edit-projets", to:"projets#edit"
+  get "projets", to:"projets#show"
+  
+  # MEMVERSHIP
   get "adherer", to:'membership#index'
-  get "donate", to:'donate#index'
-  get "agisons-ensemble", to:"involved#index"
+  get "members-list", to:"membership#memberslist"
+  get "beaction", to:"membership#beaction"
+
+  #DASHBOARD
   get "dashboard", to:'dashboard#index'
   get "parametrage", to:'dashboard#home'
+  get "donate", to:'donate#index'
+  get "agisons-ensemble", to:"involved#index"
+  
+  #ABOUTS
   get "mission", to:"abouts#show"
   get "nous-decouvrir", to:"abouts#index"
   get "mission_new", to:"abouts#new"
   get "mission_editer", to:"abouts#edit"
   get "mission_supprimer", to:"abouts#destroy"
   
-  resources :works
+  resources :campagnes#, only: %i[ show update destroy]
   resources :abouts, only: %i[create show]
+  resources :projets, only: %i[update destoy]
+  resources :works
+  resources :newletters
 
   devise_scope :user do
     get 'profile/edit'    => 'devise/registrations#edit',   :as => :edit_user_registration
