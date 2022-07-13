@@ -133,7 +133,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_06_114602) do
     t.string "country_code"
     t.string "gender"
     t.string "slug"
-    t.string "membership_category"
+    t.string "membership_category" 
     t.boolean "terms"
     t.boolean "newletter"
     t.string "password_salt"

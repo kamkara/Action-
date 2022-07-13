@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get "edit-projets", to:"projets#edit"
   get "projets", to:"projets#show"
   
-  # MEMVERSHIP
+  # MEMBERSHIP
   get "adherer", to:'membership#index'
   get "members-list", to:"membership#memberslist"
   get "beaction", to:"membership#beaction"
