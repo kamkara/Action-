@@ -45,10 +45,10 @@
       
       <%#= f.country_select  :country, collection: countries_alpha3_options, format: :with_data_attrs, class:"pl-2 outline-none border rounded-md", placeholder:"pays code..." %>
       <div class="flex w-full py-2 mb-2">
-          <%= f.text_field  :country_code,
+          <%= f.text_field  :country,
           class:"placeholder:italic placeholder:text-slate-400 flex border py-2 rounded-md w-full" %>
     
-        <%= f.text_field :contact, placeholder:"N° telephone ...", class:"flex border py-2 ml-2 rounded-md w-full" %>	
+        <%= f.text_field :full_contact, placeholder:"N° telephone ...", class:"flex border py-2 ml-2 rounded-md w-full" %>	
       </div>
       
         <%= f.password_field :password, class:"flex border py-2 rounded-md w-full", placeholder:"Mot de passe ..." %>				

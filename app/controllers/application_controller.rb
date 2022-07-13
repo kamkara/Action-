@@ -9,8 +9,7 @@ class ApplicationController < ActionController::Base
     # If you have extra params to permit, append them to the sanitizer.
     def configure_permitted_parameters
         sign_up_params = [ :first_name, :last_name, :full_name,
-                            :user_status, :country, :country_code,
-                            :contact, :email, :newletter, :terms,
+                            :user_status, :country, :email, :newletter, :terms,
                             :password, :slug, :gender, :full_contact, :category]
           
                 

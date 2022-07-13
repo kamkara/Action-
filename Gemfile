@@ -51,12 +51,8 @@ gem "bootsnap", require: false
 #Projet gems
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'devise-encryptable', '~> 0.2.0'
-#gem 'devise-security', '~> 0.17.0'
 gem 'devise-i18n', '~> 1.10', '>= 1.10.2'
-#gem 'simple_form', '~> 5.1'
 gem 'friendly_id', '~> 5.4', '>= 5.4.2'
-gem 'rails-countries'
-gem 'country_select', '~> 7.0'
 gem "bootstrap", "~> 5.0"
 gem 'bootstrap_form', '~> 5.0'
 gem 'jquery-rails'

@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_05_130229) do
   create_table "abouts", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title"
     t.string "heroImg"
+    t.string "slug"
     t.integer "country"
     t.integer "donator"
     t.integer "projets"
@@ -25,7 +26,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_05_130229) do
     t.uuid "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "slug"
     t.index ["user_id"], name: "index_abouts_on_user_id"
   end
 
@@ -125,25 +125,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_05_130229) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
-    t.string "contact"
     t.string "first_name"
     t.string "last_name"
     t.string "full_name"
     t.string "country"
-    t.string "country_code"
+    t.string "full_contact"
     t.string "gender"
     t.string "slug"
-<<<<<<< HEAD
-    t.string "membership_category" 
-=======
     t.string "category"
->>>>>>> 093cb9ab9331798926ea404f8f2b2ce9bc7de81a
-    t.boolean "terms"
     t.boolean "newletter"
-    t.string "password_salt"
+    t.boolean "terms"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "full_contact"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

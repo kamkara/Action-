@@ -3,6 +3,7 @@ class CreateAbouts < ActiveRecord::Migration[7.0]
     create_table :abouts, id: :uuid do |t|
       t.string :title
       t.string :heroImg
+      t.string :slug
       t.integer :country
       t.integer :donator
       t.integer :projets
