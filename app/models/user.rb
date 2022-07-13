@@ -15,11 +15,7 @@ class User < ApplicationRecord
 
 
   validates :first_name, :last_name, :full_name, :email, :password,
-<<<<<<< HEAD
-              :country_code, :country, :contact, :membership_category, presence: true
-=======
               :country_code, :contact, :full_contact, presence: true
->>>>>>> 093cb9ab9331798926ea404f8f2b2ce9bc7de81a
     
    validates :full_name,presence: true,
               format: { with: /\A[^0-9`!@#\$%\^&*+_=]+\z/ },

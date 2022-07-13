@@ -65,11 +65,7 @@ gem 'jquery-rails'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-
-<<<<<<< HEAD
-=======
- 
->>>>>>> 093cb9ab9331798926ea404f8f2b2ce9bc7de81a
+  
   #gem "better_errors"
   gem "binding_of_caller"
 end
