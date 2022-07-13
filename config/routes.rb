@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
+  
   root to:'welcome#index'
+
+  #### Accounted #####
+  get "connecting", to:'accounted#signInMember'
+  get "adhesion-partner", to:'accounted#signUpMember'
+  get "admin-accounted", to:'accounted#signUpAdmin'
+
   
   # CAMPAGNES
   get "nouvelle-campagnes", to:"campagnes#new"
@@ -8,10 +15,10 @@ Rails.application.routes.draw do
   #get "campagnes", to:"campagnes#show"
   
   #PROJETS
-  get "nouveau-projets", to:"projets#new"
+  get "new-projet", to:"projets#new"
   get "projets-list", to:"projets#index"
   get "edit-projets", to:"projets#edit"
-  get "projets", to:"projets#show"
+  #get "projets-show", to:"projets#show"
   
   # MEMBERSHIP
   get "adherer", to:'membership#index'
@@ -33,7 +40,7 @@ Rails.application.routes.draw do
   
   resources :campagnes#, only: %i[ show update destroy]
   resources :abouts, only: %i[create show]
-  resources :projets, only: %i[update destoy]
+  resources :projets
   resources :works
   resources :newletters
 
@@ -47,9 +54,9 @@ Rails.application.routes.draw do
   devise_for  :users,
     :path => '',
     :path_names =>
-      { :sign_in => 'connexion',
+      { :sign_in => 'connected',
         :sign_out => 'logout',
-        :sign_up =>   '', :registration => 'inscription',
+        :sign_up =>   '', :registration => 'adhesion',
         :edit => 'edit'
       }
          

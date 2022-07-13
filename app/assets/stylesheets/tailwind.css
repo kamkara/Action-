@@ -954,12 +954,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-10\/12 {
   width: 83.333333%;
+<<<<<<< HEAD
 }
 
 .w-12 {
   width: 3rem;
 }
 
+=======
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+>>>>>>> 093cb9ab9331798926ea404f8f2b2ce9bc7de81a
 .min-w-full {
   min-width: 100%;
 }
@@ -1778,6 +1787,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+<<<<<<< HEAD
 @import url("components/main.css");
 
 @import url("components/style.css");
@@ -1795,6 +1805,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 @import url('components/actiontext.css');
 
 @import url("components/pricing.css");
+=======
+>>>>>>> 093cb9ab9331798926ea404f8f2b2ce9bc7de81a
 
 .placeholder\:italic::-moz-placeholder {
   font-style: italic;
@@ -2019,6 +2031,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:flex {
     display: flex;
+<<<<<<< HEAD
   }
 
   .sm\:hidden {
@@ -2029,6 +2042,18 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: auto;
   }
 
+=======
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:w-auto {
+    width: auto;
+  }
+
+>>>>>>> 093cb9ab9331798926ea404f8f2b2ce9bc7de81a
   .sm\:w-1\/2 {
     width: 50%;
   }

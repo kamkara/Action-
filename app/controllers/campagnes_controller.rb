@@ -4,10 +4,10 @@ class CampagnesController < ApplicationController
 
   # GET /campagnes or /campagnes.json
   def index
-    @MembersList = User.where("membership_category = ?", "particulier" || "organisation").order('created_at desc')
     @CampagnesList = Campagne.all.order('created_at desc')
-    @CampagnesMonthly = @CampagnesList.where(:created_at => (Time.now.midnight - 30.day)..Time.now.midnight)
-    @CampagnesWeekly = @CampagnesMonthly.where(:created_at => (Time.now.midnight - 7.day)..Time.now.midnight)
+    @MembersList = User.membership
+    @CampagnesMonthly = @CampagnesList.monthlyActif
+    @CampagnesWeekly = @CampagnesMonthly.weeklyActif
     
   end
 
@@ -30,7 +30,7 @@ class CampagnesController < ApplicationController
 
     respond_to do |format|
       if @campagne.save
-        format.html { redirect_to campagne_url(@campagne), notice: "Campagne was successfully created." }
+        format.html { redirect_to campagne_url(@campagne), notice: "Votre campagne est envoyée aux  administrateurs pour l'approbation." }
         format.json { render :show, status: :created, location: @campagne }
       else
         format.html { render :new, status: :unprocessable_entity }

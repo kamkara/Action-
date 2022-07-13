@@ -2,17 +2,17 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-// require images
-const images = require.context('../images', true)
 
 import './components/pricing'
 import './components/modal_charte'
 import './components/caroussel'
 import './components/dashboard'
 
-//import "trix"
-//import "@rails/actiontext"
 
+//= require jquery3
+//= require popper
+//= require bootstrap
 
-require("trix")
-require("@rails/actiontext")
+// rich text editor
+import "trix"
+import "@rails/actiontext"

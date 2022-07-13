@@ -1,10 +1,42 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @campagne %>
-
+<% @title= @campagne.title %>
+<!-- component -->
 <div>
-  <%= link_to "Edit this campagne", edit_campagne_path(@campagne) %> |
-  <%= link_to "Back to campagnes", campagnes_path %>
+    <div x-data="{ sidebarOpen: false }" class="flex h-screen bg-gray-200">
+        <div :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false" class="fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden"></div>
+        <!-- Sidebar -->
+        <%= render "dashboard/shared/sidebar" %>
+          
+        <div class="flex-1 flex flex-col overflow-hidden">
+        <!-- Header -->
+        <%= render "dashboard/shared/header" %>
+            <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
+                <div class="container mx-auto px-6 py-8">
+                
+                    <div class="flex flex-col mt-8">
+                    <h3 class="text-gray-700 text-2xl font-medium">Campagne</h3>
+                      <%= render_notification %>
+                      
+                      <%= render @campagne %>
+                        <div>
+                            <%= link_to "Editer", edit_campagne_path(@campagne) %> |            
+                            <div class="flex-initial">
+                                <%= button_to @campagne, method: :delete, 
+                                    class:"flex items-center px-5 py-2.5 font-medium tracking-wide text-black
+                                    capitalize rounded-md  hover:bg-red-200 hover:fill-current hover:text-red-600
+                                    focus:outline-none  transition duration-300 transform active:scale-95 ease-in-out" do %>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                                        <path d="M0 0h24v24H0V0z" fill="none"></path>
+                                        <path d="M8 9h8v10H8z" opacity=".3"></path>
+                                        <path d="M15.5 4l-1-1h-5l-1 1H5v2h14V4zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9z"></path>
+                                    </svg>
+                                    <span class="pl-2 mx-1">Supprimer</span>
+                                <% end %>
+                            </div>
+                        </div>
 
-  <%= button_to "Destroy this campagne", @campagne, method: :delete %>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
 </div>

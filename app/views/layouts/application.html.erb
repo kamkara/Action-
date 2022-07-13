@@ -13,17 +13,26 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
     <!-- Tailwindcss -->
      <%= stylesheet_link_tag 'tailwind', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- Header -->
+    
      <%= render "shared/layouts/header" %>
 
+<<<<<<< HEAD
     <!-- Favicon-->
     <%= favicon_link_tag asset_path('images/ActionIco.jpg') %>
+=======
+      <!-- Favicon-->
+    <%= favicon_link_tag asset_path('ActionIco.jpg') %>
+
+>>>>>>> 093cb9ab9331798926ea404f8f2b2ce9bc7de81a
   </head>
 
   <body class="">
     <style type="text/css">
+<<<<<<< HEAD
     @media only screen and (min-width: 1025px) {
   .hero--video-donate-form {
     --hero_text_color: #fff;
@@ -35,6 +44,20 @@
   }
 }
 </style>
+=======
+
+      @media only screen and (min-width: 1025px) {
+        .hero--video-donate-form {
+          --hero_text_color: #fff;
+          --hero_bg_color: #000;
+        }
+
+        .hero--video-overlay {
+          --hero_bg_color: #000;
+        }
+      }
+    </style>
+>>>>>>> 093cb9ab9331798926ea404f8f2b2ce9bc7de81a
     <%= yield %>
     
 

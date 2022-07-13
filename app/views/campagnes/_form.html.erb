@@ -1,23 +1,26 @@
 
-<%= form_for(@campagne) do |f| %>
+<%= bootstrap_form_for(@campagne,  inline_errors: true) do |f| %>
+<!-- label_errors: true -->
   
   <div class="form-inputs">
-    <%= f.text_field :title, class:"p-2 border outline-none rounded-md" %>
+    <%= f.text_field :title , label:"Nom de la campagne", placeholder:"Nom de la campagne ...", help:"Plus nom reflete la cause que vous deffendez, mieux les autres adheront" %>
     <div class="">
-      <%= f.text_area :content, class:"p-2 border outline-none rounded-md" %>
+      <%= f.rich_text_area :content, hide_label: true, placeholder:"Le Message ...", help:"" %>
     </div>
+
     <div class="">
       <%= f.file_field :heroImg, class:"p-2 border outline-none rounded-md" %>
       <%= f.date_field :start_date, class:"p-2 border outline-none rounded-md" %>
     </div>
+
     <div class="">
-      <%= f.select :status, Campagne::STATUS, class:"p-2 border outline-none rounded-md" %>
-      <%= f.text_field :amount, class:"p-2 border outline-none rounded-md" %>
+      <%= f.hidden_field :status, value:"Encours" %>
+      <%= f.text_field :amount, prepend: ['Net Extimé', '€'], append: ['.00', 'pour la campagne'], hide_label:true , placeholder:"montant ...", class:"p-2 border outline-none rounded-md" %>
     </div>
     
-  </div>
-
-  <div class="form-actions mt-2">
-    <%= f.submit "Créer Campagne", class:"p-2 border bg-green-500 font-semibold text-black" %>
+    <div class="form-actions mt-2">
+      <%= f.submit "Créer Campagne", class:"p-2 border bg-green-500 font-semibold text-black" %>
+    </div>
   </div>
 <% end %>
+
