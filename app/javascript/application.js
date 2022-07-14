@@ -9,10 +9,6 @@ import './components/caroussel'
 import './components/dashboard'
 
 
-//= require jquery3
-//= require popper
-//= require bootstrap
-
 // rich text editor
 import "trix"
 import "@rails/actiontext"
